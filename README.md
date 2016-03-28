@@ -1,7 +1,7 @@
 # OpenShift Origin with Azure Active Directory
 
-<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fazure%2Fazure-quickstart-templates%2Fmaster%2Fopenshift-origin-rhel%2Fazuredeploy.json" target="_blank"><img src="http://azuredeploy.net/deploybutton.png"/></a>
-<a href="http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2Fazure%2Fazure-quickstart-templates%2Fmaster%2Fopenshift-origin-rhel%2Fazuredeploy.json" target="_blank">
+<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fanweiss%2Fazure-quickstart-templates%2Fopenshift-origin-rhel%2Fopenshift-origin-rhel%2Fazuredeploy.json" target="_blank"><img src="http://azuredeploy.net/deploybutton.png"/></a>
+<a href="http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2Fanweiss%2Fazure-quickstart-templates%2Fopenshift-origin-rhel%2Fopenshift-origin-rhel%2Fazuredeploy.json" target="_blank">
     <img src="http://armviz.io/visualizebutton.png"/>
 </a>
 
@@ -16,7 +16,9 @@ This template deploys OpenShift Origin and configures Azure Active Directory as 
 |Storage Accounts   |2 Storage Accounts                                                                                                                  |
 |Virtual Machines   |Single master<br />User-defined number of nodes<br />All VMs include a single attached data disk for Docker thin pool logical volume|
 
-## Create Azure AD Application
+## Prerequisites
+
+### Create Azure AD Application
 
 An Azure AD application must be created before deploying this template. This can be accomplished via the following steps:
 
@@ -36,6 +38,10 @@ An Azure AD application must be created before deploying this template. This can
 15. Under the *Single Sign-On* section and in the *Reply URL* box, enter the following URL: [https://[openshift_master_public_ip_dns_name].[region].cloudapp.azure.com:8443/oauth2callback/[azure_ad_app_name]]()
 16. Click the **SAVE** button at the bottom to save the configuration settings and generate a client secret
 17. Make note of the secret key that is generated as you will need this when deploying the template
+
+### Generate SSH Keys
+
+You'll need to generate a pair of SSH keys in order to provision this template. Ensure that you do not include a passcode with the private key.
 
 ## Deploy Template
 
