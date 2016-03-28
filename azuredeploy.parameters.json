@@ -1,0 +1,54 @@
+﻿{
+  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "masterVmSize": {
+      "value": null
+    },
+    "nodeVmSize": {
+      "value": null
+    },
+    "openshiftMasterHostname": {
+      "value": null
+    },
+    "openshiftMasterPublicIpDnsName": {
+      "value": null
+    },
+    "nodePrefix": {
+      "value": null
+    },
+    "nodeInstanceCount": {
+      "value": null
+    },
+    "adminUsername": {
+      "value": null
+    },
+    "sshPublicKey": {
+      "value": null
+    },
+    "sshPrivateKey": {
+      "value": null
+    },
+    "keyVaultName": {
+      "value": null
+    },
+    "azureAdUserObjectId": {
+      "value": null
+    },
+    "azureAdAppName": {
+      "value": null
+    },
+    "azureAdClientId": {
+      "value": null
+    },
+    "azureAdClientSecret": {
+      "value": null
+    },
+    "azureAdTenantId": {
+      "value": null
+    },
+    "azureAdLogoutRedirectUri": {
+      "value": null
+    }
+  }
+}
