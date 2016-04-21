@@ -3,7 +3,7 @@
 # Update system to latest packages and install dependencies
 yum -y update
 yum -y install wget git net-tools bind-utils iptables-services bridge-utils bash-completion
-yum -y install https://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-5.noarch.rpm
+yum -y install https://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-6.noarch.rpm
 sed -i -e "s/^enabled=1/enabled=0/" /etc/yum.repos.d/epel.repo
 
 # Install Ansible
