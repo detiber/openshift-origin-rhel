@@ -171,7 +171,7 @@
   },
   "variables": {
     "location": "[resourceGroup().location]",
-    "storageAccountType": "Standard_LRS",
+    "storageAccountType": "Premium_LRS",
     "namingInfix": "[toLower(parameters('nodePrefix'))]",
     "newStorageAccountSuffix": "[concat(variables('namingInfix'), 'sa')]",
     "uniqueStringArray": [
@@ -200,9 +200,9 @@
     },
     "imageReference": "[variables('osType')]",
     "sshKeyPath": "[concat('/home/', parameters('adminUsername'), '/.ssh/authorized_keys')]",
-    "nodePrepScriptUrl": "https://raw.githubusercontent.com/anweiss/azure-quickstart-templates/openshift-origin-rhel/openshift-origin-rhel/nodePrep.sh",
+    "nodePrepScriptUrl": "https://raw.githubusercontent.com/anweiss/openshift-origin-rhel/master/nodePrep.sh",
     "nodePrepScriptFileName": "nodePrep.sh",
-    "openshiftDeploymentTemplateUrl": "https://raw.githubusercontent.com/anweiss/azure-quickstart-templates/openshift-origin-rhel/openshift-origin-rhel/openshiftdeploy.json",
+    "openshiftDeploymentTemplateUrl": "https://raw.githubusercontent.com/anweiss/openshift-origin-rhel/master/openshiftdeploy.json",
     "keyVaultKeysPermissions": [ "all" ],
     "keyVaultSecretsPermissions": [ "all" ],
     "keyVaultSku": "standard",
