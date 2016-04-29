@@ -54,11 +54,11 @@ openshift_master_logout_url='https://login.microsoftonline.com/$AZUREADTENANTID/
 
 # host group for masters
 [masters]
-$MASTER.$DOMAIN
+$MASTER.$DOMAIN ansible_connection=local
 
 # host group for nodes
 [nodes]
-$MASTER.$DOMAIN
+$MASTER.$DOMAIN ansible_connection=local
 EOF
 
 for (( c=0; c<$NODECOUNT; c++ ))
