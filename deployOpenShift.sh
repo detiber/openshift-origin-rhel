@@ -43,7 +43,7 @@ ansible_ssh_user=$SUDOUSER
 ansible_sudo=true
 deployment_type=origin
 docker_udev_workaround=True
-containerized=true
+# containerized=true
 openshift_use_dnsmasq=no
 
 openshift_master_cluster_public_hostname=$MASTERPUBLICIPHOSTNAME
